@@ -62,6 +62,10 @@ header {
 .nav_links:hover {
   color: whitesmoke;
 }
+
+.ham {
+  display: none;
+}
 /* HOME */
 .home_container {
   margin-top: 4.5rem;
@@ -149,7 +153,7 @@ i {
 }
 
 /* Breakpoints */
-
+/* For Tablet */
 @media only screen and (max-width: 768px) {
   .nav_list {
     column-gap: 1.5rem;
@@ -165,14 +169,13 @@ i {
   .home_container {
     margin-top: 1.5rem;
     column-gap: 0.5rem;
-    grid-template-columns: repeat(1, 1fr);
   }
   .home_description {
     margin: 1rem;
   }
   .home_title {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
     font-size: 24px;
   }
   .home_image {
@@ -226,13 +229,23 @@ i {
 }
 
 /* For Mobile */
-@media only screen and (max-width: 600px) {
-  .nav_list {
+@media only screen and (max-width: 500px) {
+  .nav_links {
     display: none;
   }
+  .ham {
+    display: contents;
+    font-size: 24px;
+  }
+  .fa fa-bars {
+  }
   .home_container {
+    grid-template-columns: repeat(1, 1fr);
     margin-top: 2rem;
     column-gap: 1rem;
+  }
+  .home_image {
+    width: 100%;
   }
   .home_description {
     margin: 2rem;
@@ -260,32 +273,17 @@ i {
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
   }
-
-  .card1 {
-    width: 180px;
-    height: 180px;
-    margin: 0;
-  }
-  .card2 {
-    justify-self: center;
-    width: 180px;
-    height: 180px;
-    margin: 0;
-  }
-  .card3 {
-    width: 180px;
+  .infos {
+    padding: 0.75rem;
   }
   .info_card {
-    height: 70%;
-    width: 100%;
-  }
-  .infos {
-    padding: 1rem;
+    margin-top: 1rem;
+    height: auto;
   }
   .info_desc {
-    font-size: 18px;
+    font-size: 14px;
   }
   .linker {
-    font-size: 16px;
+    font-size: 8px;
   }
 }
