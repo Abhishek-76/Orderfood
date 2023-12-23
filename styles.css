@@ -13,7 +13,14 @@ ul {
   padding: 0;
 }
 li {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
 }
 a {
   color: black;
@@ -71,9 +78,9 @@ header {
 }
 /* HOME */
 .home_container {
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 4.5rem;
   column-gap: 4rem;
-  grid-template-columns: repeat(2, 1fr);
 }
 .home_description {
   align-items: center;
@@ -149,13 +156,12 @@ button {
 }
 .linker {
   font-size: 24px;
-}
-i {
   align-items: center;
-  justify-content: center;
+  display: inline-flex;
 }
 
 /* Breakpoints */
+
 /* For Tablet */
 @media only screen and (max-width: 768px) {
   .nav_list {
@@ -248,9 +254,11 @@ i {
   }
   .home_image {
     width: 100%;
+    order: 1;
   }
   .home_description {
     margin: 2rem;
+    order: 2;
   }
   .home_title {
     margin-top: 2rem;
